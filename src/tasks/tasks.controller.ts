@@ -10,10 +10,10 @@ import {
   HttpCode,
   HttpStatus,
 } from '@nestjs/common';
-import { TasksService } from './tasks.service';
-import { CreateTaskDto } from './dto/create-task.dto';
-import { UpdateTaskStatusDto } from './dto/update-task-status.dto';
-import { TaskStatus } from '../../generated/prisma/enums.js';
+import { TasksService } from './tasks.service.js';
+import { CreateTaskDto } from './dto/create-task.dto.js';
+import { UpdateTaskStatusDto } from './dto/update-task-status.dto.js';
+import type { TaskStatus } from './task.entity.js';
 
 @Controller('tasks')
 export class TasksController {

@@ -1,8 +1,8 @@
 import { IsEnum, IsNotEmpty } from 'class-validator';
-import { TaskStatus } from '../../../generated/prisma/enums.js';
+import type { TaskStatus } from '../task.entity.js';
 
 export class UpdateTaskStatusDto {
-  @IsEnum(TaskStatus)
+  @IsEnum(['TODO', 'IN_PROGRESS', 'DONE'])
   @IsNotEmpty()
   status: TaskStatus;
 }
